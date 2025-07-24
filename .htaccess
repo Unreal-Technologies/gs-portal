@@ -10,4 +10,4 @@ RewriteRule ^(([-_a-z0-9\:]+)/?)+$ index.php [NC,L]
 
 RewriteCond %{HTTP_HOST}@@%{HTTP_REFERER} !^([^@]*)@@https?://\1/.*
 RewriteRule \.(css|xml|js|png|ico|eot|svg|ttf|woff|woff2)$ - [F]
-RewriteRule Php2Core$ - [F]
+RewriteRule Utphpcore$ - [F]
