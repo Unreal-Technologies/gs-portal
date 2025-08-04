@@ -1,5 +1,5 @@
 #--app--
-## Utphpcore\Debugging
+## Class Utphpcore\Debugging
 ### Functions
 ```
 public static function dump(mixed ...$arguments): ?string
@@ -13,10 +13,9 @@ public static function exceptionHandler(\Throwable $ex): void
 ```
 public static function trace(): void
 ```
-
-## Utphpcore\IO\File
+## Class Utphpcore\IO\File
 ### Implements
-[\Utphpcore\IO\IFile](#utphpcoreioifile)
+[Unknown: \Utphpcore\IO\IFile](#unknown-utphpcoreioifile)
 
 ### Functions
 ```
@@ -91,82 +90,9 @@ public static function fromFile(IFile $oFile): IFile
 ```
 public static function fromString(string $sPath): IFile
 ```
-
-## Utphpcore\IO\IFile
-### Extends
-[\Utphpcore\IO\IDiskManager](#utphpcoreioidiskmanager)
-
-### Functions
-```
-public function asDtd(): ?Common\IDtdFile
-```
-```
-public function asIni(): ?Common\IIniFile
-```
-```
-public function asXml(): ?Common\IXmlFile
-```
-```
-public function basename(): string
-```
-```
-public function copyTo(IDirectory $oDir, string $sName = null): bool
-```
-```
-public function extension(): string
-```
-```
-public function fClose(): bool
-```
-```
-public function fOpen(string $mode, bool $useIncludePath = false, $context = null): bool
-```
-```
-public function fRead(int $length): ?string
-```
-```
-public function fWrite(string $content): mixed
-```
-```
-public function parent(): ?IDirectory
-```
-```
-public function read(): string
-```
-```
-public function relativeTo(IDirectory $oDir): ?string
-```
-```
-public function write(string $sStream, bool $bCreateDirectory = true): void
-```
-```
-public static function fromDirectory(IDirectory $oDir, string $sName): ?IFile
-```
-```
-public static function fromFile(IFile $oFile): IFile
-```
-```
-public static function fromString(string $sPath): IFile
-```
-
-## Utphpcore\IO\IDiskManager
-### Functions
-```
-public function exists(): bool
-```
-```
-public function name(): string
-```
-```
-public function path(): string
-```
-```
-public function remove(): bool
-```
-
-## Utphpcore\IO\Directory
+## Class Utphpcore\IO\Directory
 ### Implements
-[\Utphpcore\IO\IDirectory](#utphpcoreioidirectory)
+[Unknown: \Utphpcore\IO\IDirectory](#unknown-utphpcoreioidirectory)
 
 ### Functions
 ```
@@ -211,40 +137,9 @@ public static function fromDirectory(IDirectory $oDir, string $sName): ?Director
 ```
 public static function fromString(string $sDir): Directory
 ```
-
-## Utphpcore\IO\IDirectory
+## Class Utphpcore\IO\Data\Db\Database
 ### Extends
-[\Utphpcore\IO\IDiskManager](#utphpcoreioidiskmanager)
-
-### Functions
-```
-public function close(): void
-```
-```
-public function contains(string $sRegex): bool
-```
-```
-public function copyTo(IDirectory $oDirectory): void
-```
-```
-public function create(): bool
-```
-```
-public function list(string $sRegex = null, bool $bRefresh = false): array
-```
-```
-public function open(): bool
-```
-```
-public function parent(): Directory
-```
-```
-public function read(?string &$sOut): bool
-```
-
-## Utphpcore\IO\Data\Db\Database
-### Extends
-[\Utphpcore\Data\Raw](#utphpcoredataraw)
+[Class: \Utphpcore\Data\Raw](#class-utphpcoredataraw)
 
 ### Functions
 ```
@@ -277,13 +172,12 @@ public static function createInstance(string $sInstanceID, string $sHost, string
 ```
 public static function getInstance(mixed $mInstanceID = null): ?Database
 ```
-
-## Utphpcore\IO\Common\Dtd
+## Class Utphpcore\IO\Common\Dtd
 ### Extends
-[\Utphpcore\IO\File](#utphpcoreiofile)
+[Class: \Utphpcore\IO\File](#class-utphpcoreiofile)
 
 ### Implements
-[\Utphpcore\IO\Common\IDtdFile](#utphpcoreiocommonidtdfile)
+[Unknown: \Utphpcore\IO\Common\IDtdFile](#unknown-utphpcoreiocommonidtdfile)
 
 ### Functions
 ```
@@ -292,31 +186,12 @@ public function __construct(string $path, bool $requiresExtension = true)
 ```
 public function systemId(): ?string
 ```
-
-## Utphpcore\IO\Common\IDtdFile
+## Class Utphpcore\IO\Common\Xml
 ### Extends
-[\Utphpcore\IO\IFile](#utphpcoreioifile)
-
-### Functions
-```
-public function systemId(): ?string
-```
-
-## Utphpcore\IO\Common\IXmlFile
-### Extends
-[\Utphpcore\IO\IFile](#utphpcoreioifile)
-
-### Functions
-```
-public function document(): ?\Utphpcore\IO\Xml\IXmlDocument
-```
-
-## Utphpcore\IO\Common\Xml
-### Extends
-[\Utphpcore\IO\File](#utphpcoreiofile)
+[Class: \Utphpcore\IO\File](#class-utphpcoreiofile)
 
 ### Implements
-[\Utphpcore\IO\Common\IXmlFile](#utphpcoreiocommonixmlfile)
+[Unknown: \Utphpcore\IO\Common\IXmlFile](#unknown-utphpcoreiocommonixmlfile)
 
 ### Functions
 ```
@@ -325,22 +200,12 @@ public function __construct(string $path, bool $requiresExtension = true)
 ```
 public function document(): ?\Utphpcore\IO\Xml\IXmlDocument
 ```
-
-## Utphpcore\IO\Common\IIniFile
+## Class Utphpcore\IO\Common\Ini
 ### Extends
-[\Utphpcore\IO\IFile](#utphpcoreioifile)
-
-### Functions
-```
-public function parse(bool $sections = true): array
-```
-
-## Utphpcore\IO\Common\Ini
-### Extends
-[\Utphpcore\IO\File](#utphpcoreiofile)
+[Class: \Utphpcore\IO\File](#class-utphpcoreiofile)
 
 ### Implements
-[\Utphpcore\IO\Common\IIniFile](#utphpcoreiocommoniinifile)
+[Unknown: \Utphpcore\IO\Common\IIniFile](#unknown-utphpcoreiocommoniinifile)
 
 ### Functions
 ```
@@ -349,94 +214,9 @@ public function __construct(string $path, bool $requiresExtension = true)
 ```
 public function parse(bool $sections = true): array
 ```
-
-## Utphpcore\IO\Xml\IXmlElement
-### Functions
-```
-public function __clone(): void
-```
-```
-public function __toString(): string
-```
-```
-public function addChild(IXmlElement $element): bool
-```
-```
-public function asArray(): array
-```
-```
-public function attributes(array $list = null): array
-```
-```
-public function children(): array
-```
-```
-public function createChild(string $name): ?IXmlElement
-```
-```
-public function id(): string
-```
-```
-public function name(): string
-```
-```
-public function parent(?string $value = null): string
-```
-```
-public function remove(IXmlElement $element): bool
-```
-```
-public function search(string $regex, int $returnIndex = null, string $type = self::SEARCH_NAME, $recursive = true, $recursivePos = 0): ?array
-```
-```
-public function text(string $text = null): ?string
-```
-```
-public function updatePosition(int $pos): void
-```
-
-## Utphpcore\IO\Xml\IXmlDocument
-### Extends
-[\Utphpcore\IO\Xml\IXmlElement](#utphpcoreioxmlixmlelement)
-
-### Functions
-```
-public function __toString(): string
-```
-```
-public function asElement(): IXmlElement
-```
-```
-public function closed(bool $value = null): ?bool
-```
-```
-public function doctype(): IXmlDoctype
-```
-```
-public function validateDtd(\Utphpcore\IO\Common\IDtdFile $dtdSchemaFile, string $root, bool $output = true, string $encoding = 'utf-8'): bool
-```
-```
-public function validateDtdStream(string $stream, string $root, bool $output = true, string $encoding = 'utf-8'): bool
-```
-```
-public function validateXsd(\Utphpcore\IO\IFile $xsdSchemaFile, bool $output = true): bool
-```
-```
-public function validateXsdStream(string $stream, bool $output = true): bool
-```
-
-## Utphpcore\IO\Xml\IXmlDoctype
-### Functions
-```
-public function __toString(): string
-```
-```
-public function attributes(): array
-```
-
-## Utphpcore\IO\Xml\Element
+## Class Utphpcore\IO\Xml\Element
 ### Implements
-[\Utphpcore\IO\Xml\IXmlElement](#utphpcoreioxmlixmlelement)
+[Unknown: \Utphpcore\IO\Xml\IXmlElement](#unknown-utphpcoreioxmlixmlelement)
 
 ### Functions
 ```
@@ -496,13 +276,12 @@ public function children(): array
 ```
 public function remove(IXmlElement $element): bool
 ```
-
-## Utphpcore\IO\Xml\Document
+## Class Utphpcore\IO\Xml\Document
 ### Extends
-[\Utphpcore\IO\Xml\Element](#utphpcoreioxmlelement)
+[Class: \Utphpcore\IO\Xml\Element](#class-utphpcoreioxmlelement)
 
 ### Implements
-[\Utphpcore\IO\Xml\IXmlDocument](#utphpcoreioxmlixmldocument)
+[Unknown: \Utphpcore\IO\Xml\IXmlDocument](#unknown-utphpcoreioxmlixmldocument)
 
 ### Functions
 ```
@@ -526,10 +305,9 @@ public function __construct(string $name, IXmlDoctype $doctype = null)
 ```
 public function __toString(): string
 ```
-
-## Utphpcore\IO\Xml\Doctype
+## Class Utphpcore\IO\Xml\Doctype
 ### Implements
-[\Utphpcore\IO\Xml\IXmlDoctype](#utphpcoreioxmlixmldoctype)
+[Unknown: \Utphpcore\IO\Xml\IXmlDoctype](#unknown-utphpcoreioxmlixmldoctype)
 
 ### Functions
 ```
@@ -568,16 +346,14 @@ public static function xHtmlTransitional(): Doctype
 ```
 public static function xml(string $version = '1.0', string $encoding = 'utf-8', bool $standalone = true): Doctype
 ```
-
-## Utphpcore\Source\Analyzers\PhpAnalyzer\Tokens
+## Class Utphpcore\Source\Analyzers\PhpAnalyzer\Tokens
 ### Functions
 ```
 public static function getToken(int $value): ?string
 ```
-
-## Utphpcore\Source\Analyzers\PhpAnalyzer\ClassAnalyzer
+## Class Utphpcore\Source\Analyzers\PhpAnalyzer\ClassAnalyzer
 ### Uses
-[\Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#utphpcoresourceanalyzersphpanalyzertbasics)
+[Unknown: \Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#unknown-utphpcoresourceanalyzersphpanalyzertbasics)
 
 ### Functions
 ```
@@ -596,12 +372,14 @@ public function implements(): array
 public function name(): ?string
 ```
 ```
+public function namespace(): ?string
+```
+```
 public function uses(): array
 ```
-
-## Utphpcore\Source\Analyzers\PhpAnalyzer\EnumAnalyzer
+## Class Utphpcore\Source\Analyzers\PhpAnalyzer\EnumAnalyzer
 ### Uses
-[\Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#utphpcoresourceanalyzersphpanalyzertbasics)
+[Unknown: \Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#unknown-utphpcoresourceanalyzersphpanalyzertbasics)
 
 ### Functions
 ```
@@ -616,10 +394,9 @@ public function name(): ?string
 ```
 public function uses(): array
 ```
-
-## Utphpcore\Source\Analyzers\PhpAnalyzer\InterfaceAnalyzer
+## Class Utphpcore\Source\Analyzers\PhpAnalyzer\InterfaceAnalyzer
 ### Uses
-[\Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#utphpcoresourceanalyzersphpanalyzertbasics)
+[Unknown: \Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#unknown-utphpcoresourceanalyzersphpanalyzertbasics)
 
 ### Functions
 ```
@@ -634,10 +411,9 @@ public function functions(): array
 ```
 public function name(): ?string
 ```
-
-## Utphpcore\Source\Analyzers\PhpAnalyzer\TraitAnalyzer
+## Class Utphpcore\Source\Analyzers\PhpAnalyzer\TraitAnalyzer
 ### Uses
-[\Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#utphpcoresourceanalyzersphpanalyzertbasics)
+[Unknown: \Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#unknown-utphpcoresourceanalyzersphpanalyzertbasics)
 
 ### Functions
 ```
@@ -649,10 +425,9 @@ public function extends(): ?string
 ```
 public function name(): ?string
 ```
-
-## Utphpcore\Source\Analyzers\PhpAnalyzer\FunctionAnalyzer
+## Class Utphpcore\Source\Analyzers\PhpAnalyzer\FunctionAnalyzer
 ### Uses
-[\Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#utphpcoresourceanalyzersphpanalyzertbasics)
+[Unknown: \Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#unknown-utphpcoresourceanalyzersphpanalyzertbasics)
 
 ### Functions
 ```
@@ -667,8 +442,7 @@ public function name(): ?string
 ```
 public function raw(): ?string
 ```
-
-## Utphpcore\Source\Analyzers\PhpAnalyzer
+## Class Utphpcore\Source\Analyzers\PhpAnalyzer
 ### Functions
 ```
 public function __construct(\Utphpcore\IO\File $file)
@@ -688,10 +462,9 @@ public function namespace(): ?string
 ```
 public function traits(): array
 ```
-
-## Utphpcore\GUI\NoHtml\Xhtml
+## Class Utphpcore\GUI\NoHtml\Xhtml
 ### Implements
-[\Utphpcore\GUI\NoHtml\IXhtml](#utphpcoreguinohtmlixhtml)
+[Unknown: \Utphpcore\GUI\NoHtml\IXhtml](#unknown-utphpcoreguinohtmlixhtml)
 
 ### Functions
 ```
@@ -724,38 +497,7 @@ public function parent(): ?Xhtml
 ```
 public function text(string $text): void
 ```
-
-## Utphpcore\GUI\NoHtml\IXhtml
-### Functions
-```
-public function __construct()
-```
-```
-public function __toString(): string
-```
-```
-public function add(string $tag, \Closure $callback=null): Xhtml
-```
-```
-public function append(mixed $content): void
-```
-```
-public function attributes(): Attributes
-```
-```
-public function children(): array
-```
-```
-public function clear(): void
-```
-```
-public function get(string $path, \Closure $callback): void
-```
-```
-public function text(string $text): void
-```
-
-## Utphpcore\GUI\NoHTML\Attributes
+## Class Utphpcore\GUI\NoHTML\Attributes
 ### Functions
 ```
 public function __construct()
@@ -775,24 +517,12 @@ public function get(string $name): ?string
 ```
 public function set(string $name, string $value): void
 ```
-
-## Utphpcore\GUI\NoHtml\FontAwesome\Icon
+## Class Utphpcore\GUI\NoHtml\FontAwesome\Icon
 ### Functions
 ```
 public function __construct(\Utphpcore\GUI\NoHtml\IXhtml $container, string $icon)
 ```
-
-## Utphpcore\GUI\NoHtml\Materialize\Form\InputTypes
-### Uses
-[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
-
-
-## Utphpcore\GUI\NoHtml\Materialize\Form\Methods
-### Uses
-[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
-
-
-## Utphpcore\GUI\NoHtml\Materialize\Form\Options
+## Class Utphpcore\GUI\NoHtml\Materialize\Form\Options
 ### Functions
 ```
 protected function __construct()
@@ -818,8 +548,7 @@ public function step(?float $value=null, bool $clear = false): ?float
 ```
 public static function Default(): Options
 ```
-
-## Utphpcore\GUI\NoHtml\Materialize\Form\SelectOptions
+## Class Utphpcore\GUI\NoHtml\Materialize\Form\SelectOptions
 ### Functions
 ```
 public function __construct()
@@ -830,13 +559,7 @@ public function data(): array
 ```
 public function set(string $text, string $value, bool $isSelected): void
 ```
-
-## Utphpcore\GUI\NoHTML\Materialize\Columns
-### Uses
-[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
-
-
-## Utphpcore\GUI\NoHtml\Materialize\Form
+## Class Utphpcore\GUI\NoHtml\Materialize\Form
 ### Functions
 ```
 public function __construct(\Utphpcore\GUI\NoHtml\Xhtml $container, Form\Methods $method, \Closure $optionsCb = null)
@@ -853,16 +576,14 @@ public function reference(): \Utphpcore\GUI\NoHtml\Xhtml
 ```
 public function submit(string $text, \Closure $optionsCb = null): \Utphpcore\GUI\NoHtml\Xhtml
 ```
-
-## Utphpcore\GUI\NoHtml\Materialize\Icon
+## Class Utphpcore\GUI\NoHtml\Materialize\Icon
 ### Functions
 ```
 function __construct(\Utphpcore\GUI\NoHtml\IXhtml $container, string $icon)
 ```
-
-## Utphpcore\GUI\NoHtml\Materialize\Navigation
+## Class Utphpcore\GUI\NoHtml\Materialize\Navigation
 ### Extends
-[\Utphpcore\GUI\NoHtml\Materialize\Submenu](#utphpcoreguinohtmlmaterializesubmenu)
+[Class: \Utphpcore\GUI\NoHtml\Materialize\Submenu](#class-utphpcoreguinohtmlmaterializesubmenu)
 
 ### Functions
 ```
@@ -874,8 +595,7 @@ public function navBar(\Utphpcore\GUI\NoHtml\IXhtml $container): void
 ```
 public function submenu(string $text, \Closure $callback): void
 ```
-
-## Utphpcore\GUI\NoHtml\Materialize\Submenu
+## Class Utphpcore\GUI\NoHtml\Materialize\Submenu
 ### Functions
 ```
 public function __construct()
@@ -889,8 +609,7 @@ public function seperator(): void
 ```
 public function toArray(): array
 ```
-
-## Utphpcore\Core
+## Class Utphpcore\Core
 ### Functions
 ```
 function __construct(\Closure $cb)
@@ -913,8 +632,7 @@ public static function initialize(): void
 ```
 public static function shutdown(): void
 ```
-
-## Utphpcore\Data\Version
+## Class Utphpcore\Data\Version
 ### Functions
 ```
 public function __construct(string $name, int $build, int $major, int $minor, int $revision, ?string $url = null)
@@ -934,46 +652,9 @@ public function render(\Utphpcore\GUI\NoHtml\Xhtml $container): void
 ```
 public function update(string $name, int $build, int $major, int $minor, int $revision, ?string $url = null): void
 ```
-
-## Utphpcore\Data\Collections\ILinq
-### Functions
-```
-public function avg(\Closure $lambda = null): ILinq
-```
-```
-public function count(): int
-```
-```
-public function firstOrDefault(\Closure $lambda = null): mixed
-```
-```
-public function groupBy(\Closure $lambda): ILinq
-```
-```
-public function orderBy(\Closure $lambda = null, SortDirections $direction = SortDirections::Asc): ILinq
-```
-```
-public function search(array $needle): ?int
-```
-```
-public function select(\Closure $lambda): ILinq
-```
-```
-public function skip(int $count): ILinq
-```
-```
-public function sum(\Closure $lambda = null): ILinq
-```
-```
-public function toArray(\Closure $lambda = null): array
-```
-```
-public function where(\Closure $lambda): ILinq
-```
-
-## Utphpcore\Data\Collections\Linq
+## Class Utphpcore\Data\Collections\Linq
 ### Implements
-[\Utphpcore\Data\Collections\ILinq](#utphpcoredatacollectionsilinq)
+[Unknown: \Utphpcore\Data\Collections\ILinq](#unknown-utphpcoredatacollectionsilinq)
 
 ### Functions
 ```
@@ -1009,36 +690,9 @@ public function toArray(\Closure $lambda = null, bool $keepKeys = false): array
 ```
 public function where(\Closure $lambda): Linq
 ```
-
-## Utphpcore\Data\Collections\SortDirections
-### Uses
-[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
-
-
-## Utphpcore\Data\Collections\IDictionary
-### Functions
-```
-public function add(mixed $key, mixed $value, bool $setAsArray = false): bool
-```
-```
-public function get(mixed $key): mixed
-```
-```
-public function keys(): array
-```
-```
-public function remove(mixed $key): bool
-```
-```
-public function toArray(): array
-```
-```
-public function values(): array
-```
-
-## Utphpcore\Data\Collections\Dictionary
+## Class Utphpcore\Data\Collections\Dictionary
 ### Implements
-[\Utphpcore\Data\Collections\IDictionary](#utphpcoredatacollectionsidictionary)
+[Unknown: \Utphpcore\Data\Collections\IDictionary](#unknown-utphpcoredatacollectionsidictionary)
 
 ### Functions
 ```
@@ -1062,35 +716,31 @@ public function values(): array
 ```
 public static function fromArray(array $kvp): Dictionary
 ```
-
-## Utphpcore\Data\Exceptions\NotImplementedException
+## Class Utphpcore\Data\Exceptions\NotImplementedException
 ### Extends
-[\Exception](#exception)
+[Unknown: \Exception](#unknown-exception)
 
 ### Functions
 ```
 public function __construct(string $message = "", int $code = 0, ?\Throwable $previous = null)
 ```
-
-## Utphpcore\Data\Exceptions\UnexpectedValueException
+## Class Utphpcore\Data\Exceptions\UnexpectedValueException
 ### Extends
-[\Exception](#exception)
+[Unknown: \Exception](#unknown-exception)
 
 ### Functions
 ```
 public function __construct(string $message = "", int $code = 0, ?\Throwable $previous = null)
 ```
-
-## Utphpcore\Data\Exceptions\IOException
+## Class Utphpcore\Data\Exceptions\IOException
 ### Extends
-[\Exception](#exception)
+[Unknown: \Exception](#unknown-exception)
 
 ### Functions
 ```
 public function __construct(string $message = "", int $code = 0, ?\Throwable $previous = null)
 ```
-
-## Utphpcore\Data\Configuration
+## Class Utphpcore\Data\Configuration
 ### Functions
 ```
 function __construct(\Utphpcore\Core $core)
@@ -1098,8 +748,7 @@ function __construct(\Utphpcore\Core $core)
 ```
 public function get(string $path, string $seperator = '/'): mixed
 ```
-
-## Utphpcore\Data\AssetManager
+## Class Utphpcore\Data\AssetManager
 ### Functions
 ```
 public function __construct(\Utphpcore\Core $core)
@@ -1110,13 +759,7 @@ public function copyTo(\Utphpcore\IO\IFile $file, string $name, AssetTypes $to):
 ```
 public function get(string $asset, AssetTypes $from = AssetTypes::All): ?\Utphpcore\IO\IDiskManager
 ```
-
-## Utphpcore\Data\AssetTypes
-### Uses
-[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
-
-
-## Utphpcore\Data\Raw
+## Class Utphpcore\Data\Raw
 ### Functions
 ```
 protected function __construct(array $aList = null)
@@ -1130,8 +773,7 @@ public function get(string $sName): mixed
 ```
 public function toArray(): array
 ```
-
-## Utphpcore\Data\Cache
+## Class Utphpcore\Data\Cache
 ### Functions
 ```
 public static function all(CacheTypes $cache): mixed
@@ -1145,21 +787,13 @@ public static function get(CacheTypes $cache, string $key): mixed
 ```
 public static function set(CacheTypes $cache, string $key, mixed $mValue): void
 ```
-
-## Utphpcore\Data\CacheTypes
-### Uses
-[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
-
-
-## Utphpcore\Commands\Map
+## Class Utphpcore\Commands\Map
 ### Functions
 ```
 function __construct(\Utphpcore\IO\Directory $directory)
 ```
-
-## Utphpcore\Commands\Readme
+## Class Utphpcore\Commands\Readme
 ### Functions
 ```
 function __construct(\Utphpcore\IO\Directory $directory)
 ```
-
