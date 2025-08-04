@@ -2,9 +2,7 @@
 require_once('/opt/lampp/htdocs/portal/Utphpcore/Commands/Map.Class.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/Core.Class.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/Data/AssetManager.Class.php');
-require_once('/opt/lampp/htdocs/portal/Utphpcore/Data/AssetTypes.Enum.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/Data/Cache.Class.php');
-require_once('/opt/lampp/htdocs/portal/Utphpcore/Data/CacheTypes.Enum.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/Data/Collections/Enum/TInfo.Trait.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/Data/Collections/IDictionary.Interface.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/Data/Collections/ILinq.Interface.php');
@@ -38,6 +36,8 @@ require_once('/opt/lampp/htdocs/portal/Utphpcore/Source/Analyzers/PhpAnalyzer.Cl
 require_once('/opt/lampp/htdocs/portal/Utphpcore/Source/Analyzers/PhpAnalyzer/TBasics.Trait.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/Source/Analyzers/PhpAnalyzer/Tokens.Class.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/Source/Analyzers/PhpAnalyzer/TraitAnalyzer.Class.php');
+require_once('/opt/lampp/htdocs/portal/Utphpcore/Data/AssetTypes.Enum.php');
+require_once('/opt/lampp/htdocs/portal/Utphpcore/Data/CacheTypes.Enum.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/Data/Collections/Dictionary.Class.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Navigation.Class.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/IO/Common/IDtdFile.Interface.php');
