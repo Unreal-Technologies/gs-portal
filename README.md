@@ -92,6 +92,25 @@ public function values(): array
 public static function fromArray(array $kvp): Dictionary
 ```
 ## Trait: \Utphpcore\Data\Collections\Enum\TInfo
+### Functions
+```
+public function value()
+```
+```
+public static function fromString(string $name): mixed
+```
+```
+public static function inverseList(): array
+```
+```
+public static function list(): array
+```
+```
+public static function names(): array
+```
+```
+public static function values(): array
+```
 ## Interface: \Utphpcore\Data\Collections\IDictionary
 ### Functions
 ```
@@ -1098,6 +1117,13 @@ public function name(): ?string
 public function namespace(): ?string
 ```
 ## Trait: \Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics
+### Functions
+```
+public function body(array $tokens, string $namespace): array
+```
+```
+public function header(array $tokens, string $namespace): array
+```
 ## Class: \Utphpcore\Source\Analyzers\PhpAnalyzer\Tokens
 ### Functions
 ```
@@ -1113,6 +1139,9 @@ public function __construct(array $tokens, string $namespace)
 ```
 ```
 public function extends(): ?string
+```
+```
+public function functions(): array
 ```
 ```
 public function name(): ?string
