@@ -782,6 +782,16 @@ public function set(string $name, string $value): void
 public function __construct(\Utphpcore\GUI\NoHtml\IXhtml $container, string $icon)
 ```
 
+## Utphpcore\GUI\NoHtml\Materialize\Form\InputTypes
+### Uses
+[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
+
+
+## Utphpcore\GUI\NoHtml\Materialize\Form\Methods
+### Uses
+[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
+
+
 ## Utphpcore\GUI\NoHtml\Materialize\Form\Options
 ### Functions
 ```
@@ -820,6 +830,11 @@ public function data(): array
 ```
 public function set(string $text, string $value, bool $isSelected): void
 ```
+
+## Utphpcore\GUI\NoHTML\Materialize\Columns
+### Uses
+[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
+
 
 ## Utphpcore\GUI\NoHtml\Materialize\Form
 ### Functions
@@ -995,6 +1010,11 @@ public function toArray(\Closure $lambda = null, bool $keepKeys = false): array
 public function where(\Closure $lambda): Linq
 ```
 
+## Utphpcore\Data\Collections\SortDirections
+### Uses
+[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
+
+
 ## Utphpcore\Data\Collections\IDictionary
 ### Functions
 ```
@@ -1091,6 +1111,11 @@ public function copyTo(\Utphpcore\IO\IFile $file, string $name, AssetTypes $to):
 public function get(string $asset, AssetTypes $from = AssetTypes::All): ?\Utphpcore\IO\IDiskManager
 ```
 
+## Utphpcore\Data\AssetTypes
+### Uses
+[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
+
+
 ## Utphpcore\Data\Raw
 ### Functions
 ```
@@ -1120,6 +1145,11 @@ public static function get(CacheTypes $cache, string $key): mixed
 ```
 public static function set(CacheTypes $cache, string $key, mixed $mValue): void
 ```
+
+## Utphpcore\Data\CacheTypes
+### Uses
+[\Utphpcore\Data\Collections\Enum\TInfo](#utphpcoredatacollectionsenumtinfo)
+
 
 ## Utphpcore\Commands\Map
 ### Functions
