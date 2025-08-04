@@ -92,6 +92,78 @@ public static function fromFile(IFile $oFile): IFile
 public static function fromString(string $sPath): IFile
 ```
 
+## Utphpcore\IO\IFile
+### Extends
+[\Utphpcore\IO\IDiskManager](#utphpcoreioidiskmanager)
+
+### Functions
+```
+public function asDtd(): ?Common\IDtdFile
+```
+```
+public function asIni(): ?Common\IIniFile
+```
+```
+public function asXml(): ?Common\IXmlFile
+```
+```
+public function basename(): string
+```
+```
+public function copyTo(IDirectory $oDir, string $sName = null): bool
+```
+```
+public function extension(): string
+```
+```
+public function fClose(): bool
+```
+```
+public function fOpen(string $mode, bool $useIncludePath = false, $context = null): bool
+```
+```
+public function fRead(int $length): ?string
+```
+```
+public function fWrite(string $content): mixed
+```
+```
+public function parent(): ?IDirectory
+```
+```
+public function read(): string
+```
+```
+public function relativeTo(IDirectory $oDir): ?string
+```
+```
+public function write(string $sStream, bool $bCreateDirectory = true): void
+```
+```
+public static function fromDirectory(IDirectory $oDir, string $sName): ?IFile
+```
+```
+public static function fromFile(IFile $oFile): IFile
+```
+```
+public static function fromString(string $sPath): IFile
+```
+
+## Utphpcore\IO\IDiskManager
+### Functions
+```
+public function exists(): bool
+```
+```
+public function name(): string
+```
+```
+public function path(): string
+```
+```
+public function remove(): bool
+```
+
 ## Utphpcore\IO\Directory
 ### Implements
 [\Utphpcore\IO\IDirectory](#utphpcoreioidirectory)
@@ -138,6 +210,36 @@ public static function fromDirectory(IDirectory $oDir, string $sName): ?Director
 ```
 ```
 public static function fromString(string $sDir): Directory
+```
+
+## Utphpcore\IO\IDirectory
+### Extends
+[\Utphpcore\IO\IDiskManager](#utphpcoreioidiskmanager)
+
+### Functions
+```
+public function close(): void
+```
+```
+public function contains(string $sRegex): bool
+```
+```
+public function copyTo(IDirectory $oDirectory): void
+```
+```
+public function create(): bool
+```
+```
+public function list(string $sRegex = null, bool $bRefresh = false): array
+```
+```
+public function open(): bool
+```
+```
+public function parent(): Directory
+```
+```
+public function read(?string &$sOut): bool
 ```
 
 ## Utphpcore\IO\Data\Db\Database
@@ -191,6 +293,24 @@ public function __construct(string $path, bool $requiresExtension = true)
 public function systemId(): ?string
 ```
 
+## Utphpcore\IO\Common\IDtdFile
+### Extends
+[\Utphpcore\IO\IFile](#utphpcoreioifile)
+
+### Functions
+```
+public function systemId(): ?string
+```
+
+## Utphpcore\IO\Common\IXmlFile
+### Extends
+[\Utphpcore\IO\IFile](#utphpcoreioifile)
+
+### Functions
+```
+public function document(): ?\Utphpcore\IO\Xml\IXmlDocument
+```
+
 ## Utphpcore\IO\Common\Xml
 ### Extends
 [\Utphpcore\IO\File](#utphpcoreiofile)
@@ -206,6 +326,15 @@ public function __construct(string $path, bool $requiresExtension = true)
 public function document(): ?\Utphpcore\IO\Xml\IXmlDocument
 ```
 
+## Utphpcore\IO\Common\IIniFile
+### Extends
+[\Utphpcore\IO\IFile](#utphpcoreioifile)
+
+### Functions
+```
+public function parse(bool $sections = true): array
+```
+
 ## Utphpcore\IO\Common\Ini
 ### Extends
 [\Utphpcore\IO\File](#utphpcoreiofile)
@@ -219,6 +348,90 @@ public function __construct(string $path, bool $requiresExtension = true)
 ```
 ```
 public function parse(bool $sections = true): array
+```
+
+## Utphpcore\IO\Xml\IXmlElement
+### Functions
+```
+public function __clone(): void
+```
+```
+public function __toString(): string
+```
+```
+public function addChild(IXmlElement $element): bool
+```
+```
+public function asArray(): array
+```
+```
+public function attributes(array $list = null): array
+```
+```
+public function children(): array
+```
+```
+public function createChild(string $name): ?IXmlElement
+```
+```
+public function id(): string
+```
+```
+public function name(): string
+```
+```
+public function parent(?string $value = null): string
+```
+```
+public function remove(IXmlElement $element): bool
+```
+```
+public function search(string $regex, int $returnIndex = null, string $type = self::SEARCH_NAME, $recursive = true, $recursivePos = 0): ?array
+```
+```
+public function text(string $text = null): ?string
+```
+```
+public function updatePosition(int $pos): void
+```
+
+## Utphpcore\IO\Xml\IXmlDocument
+### Extends
+[\Utphpcore\IO\Xml\IXmlElement](#utphpcoreioxmlixmlelement)
+
+### Functions
+```
+public function __toString(): string
+```
+```
+public function asElement(): IXmlElement
+```
+```
+public function closed(bool $value = null): ?bool
+```
+```
+public function doctype(): IXmlDoctype
+```
+```
+public function validateDtd(\Utphpcore\IO\Common\IDtdFile $dtdSchemaFile, string $root, bool $output = true, string $encoding = 'utf-8'): bool
+```
+```
+public function validateDtdStream(string $stream, string $root, bool $output = true, string $encoding = 'utf-8'): bool
+```
+```
+public function validateXsd(\Utphpcore\IO\IFile $xsdSchemaFile, bool $output = true): bool
+```
+```
+public function validateXsdStream(string $stream, bool $output = true): bool
+```
+
+## Utphpcore\IO\Xml\IXmlDoctype
+### Functions
+```
+public function __toString(): string
+```
+```
+public function attributes(): array
 ```
 
 ## Utphpcore\IO\Xml\Element
@@ -416,6 +629,9 @@ public function __construct(array $tokens, string $namespace)
 public function extends(): ?string
 ```
 ```
+public function functions(): array
+```
+```
 public function name(): ?string
 ```
 
@@ -504,6 +720,36 @@ public function get(string $path, \Closure $callback): void
 ```
 ```
 public function parent(): ?Xhtml
+```
+```
+public function text(string $text): void
+```
+
+## Utphpcore\GUI\NoHtml\IXhtml
+### Functions
+```
+public function __construct()
+```
+```
+public function __toString(): string
+```
+```
+public function add(string $tag, \Closure $callback=null): Xhtml
+```
+```
+public function append(mixed $content): void
+```
+```
+public function attributes(): Attributes
+```
+```
+public function children(): array
+```
+```
+public function clear(): void
+```
+```
+public function get(string $path, \Closure $callback): void
 ```
 ```
 public function text(string $text): void
@@ -674,6 +920,42 @@ public function render(\Utphpcore\GUI\NoHtml\Xhtml $container): void
 public function update(string $name, int $build, int $major, int $minor, int $revision, ?string $url = null): void
 ```
 
+## Utphpcore\Data\Collections\ILinq
+### Functions
+```
+public function avg(\Closure $lambda = null): ILinq
+```
+```
+public function count(): int
+```
+```
+public function firstOrDefault(\Closure $lambda = null): mixed
+```
+```
+public function groupBy(\Closure $lambda): ILinq
+```
+```
+public function orderBy(\Closure $lambda = null, SortDirections $direction = SortDirections::Asc): ILinq
+```
+```
+public function search(array $needle): ?int
+```
+```
+public function select(\Closure $lambda): ILinq
+```
+```
+public function skip(int $count): ILinq
+```
+```
+public function sum(\Closure $lambda = null): ILinq
+```
+```
+public function toArray(\Closure $lambda = null): array
+```
+```
+public function where(\Closure $lambda): ILinq
+```
+
 ## Utphpcore\Data\Collections\Linq
 ### Implements
 [\Utphpcore\Data\Collections\ILinq](#utphpcoredatacollectionsilinq)
@@ -711,6 +993,27 @@ public function toArray(\Closure $lambda = null, bool $keepKeys = false): array
 ```
 ```
 public function where(\Closure $lambda): Linq
+```
+
+## Utphpcore\Data\Collections\IDictionary
+### Functions
+```
+public function add(mixed $key, mixed $value, bool $setAsArray = false): bool
+```
+```
+public function get(mixed $key): mixed
+```
+```
+public function keys(): array
+```
+```
+public function remove(mixed $key): bool
+```
+```
+public function toArray(): array
+```
+```
+public function values(): array
 ```
 
 ## Utphpcore\Data\Collections\Dictionary
