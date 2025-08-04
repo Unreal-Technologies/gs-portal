@@ -15,6 +15,9 @@ public static function trace(): void
 ```
 
 ## Utphpcore\IO\File
+### Implements
+[\Utphpcore\IO\IFile](#utphpcoreioifile)
+
 ### Functions
 ```
 protected function __construct(string $sPath)
@@ -90,6 +93,9 @@ public static function fromString(string $sPath): IFile
 ```
 
 ## Utphpcore\IO\Directory
+### Implements
+[\Utphpcore\IO\IDirectory](#utphpcoreioidirectory)
+
 ### Functions
 ```
 public function close(): void
@@ -174,6 +180,9 @@ public static function getInstance(mixed $mInstanceID = null): ?Database
 ### Extends
 [\Utphpcore\IO\File](#utphpcoreiofile)
 
+### Implements
+[\Utphpcore\IO\Common\IDtdFile](#utphpcoreiocommonidtdfile)
+
 ### Functions
 ```
 public function __construct(string $path, bool $requiresExtension = true)
@@ -185,6 +194,9 @@ public function systemId(): ?string
 ## Utphpcore\IO\Common\Xml
 ### Extends
 [\Utphpcore\IO\File](#utphpcoreiofile)
+
+### Implements
+[\Utphpcore\IO\Common\IXmlFile](#utphpcoreiocommonixmlfile)
 
 ### Functions
 ```
@@ -198,6 +210,9 @@ public function document(): ?\Utphpcore\IO\Xml\IXmlDocument
 ### Extends
 [\Utphpcore\IO\File](#utphpcoreiofile)
 
+### Implements
+[\Utphpcore\IO\Common\IIniFile](#utphpcoreiocommoniinifile)
+
 ### Functions
 ```
 public function __construct(string $path, bool $requiresExtension = true)
@@ -207,6 +222,9 @@ public function parse(bool $sections = true): array
 ```
 
 ## Utphpcore\IO\Xml\Element
+### Implements
+[\Utphpcore\IO\Xml\IXmlElement](#utphpcoreioxmlixmlelement)
+
 ### Functions
 ```
 final public function addChild(IXmlElement $element): bool
@@ -270,6 +288,9 @@ public function remove(IXmlElement $element): bool
 ### Extends
 [\Utphpcore\IO\Xml\Element](#utphpcoreioxmlelement)
 
+### Implements
+[\Utphpcore\IO\Xml\IXmlDocument](#utphpcoreioxmlixmldocument)
+
 ### Functions
 ```
 final public function asElement(): IXmlElement
@@ -294,6 +315,9 @@ public function __toString(): string
 ```
 
 ## Utphpcore\IO\Xml\Doctype
+### Implements
+[\Utphpcore\IO\Xml\IXmlDoctype](#utphpcoreioxmlixmldoctype)
+
 ### Functions
 ```
 public function __construct(string $start, string $end, array $attributes)
@@ -339,6 +363,9 @@ public static function getToken(int $value): ?string
 ```
 
 ## Utphpcore\Source\Analyzers\PhpAnalyzer\ClassAnalyzer
+### Uses
+[\Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#utphpcoresourceanalyzersphpanalyzertbasics)
+
 ### Functions
 ```
 public function __construct(array $tokens, string $namespace)
@@ -360,6 +387,9 @@ public function uses(): array
 ```
 
 ## Utphpcore\Source\Analyzers\PhpAnalyzer\EnumAnalyzer
+### Uses
+[\Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#utphpcoresourceanalyzersphpanalyzertbasics)
+
 ### Functions
 ```
 public function __construct(array $tokens, string $namespace)
@@ -375,6 +405,9 @@ public function uses(): array
 ```
 
 ## Utphpcore\Source\Analyzers\PhpAnalyzer\InterfaceAnalyzer
+### Uses
+[\Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#utphpcoresourceanalyzersphpanalyzertbasics)
+
 ### Functions
 ```
 public function __construct(array $tokens, string $namespace)
@@ -387,6 +420,9 @@ public function name(): ?string
 ```
 
 ## Utphpcore\Source\Analyzers\PhpAnalyzer\TraitAnalyzer
+### Uses
+[\Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#utphpcoresourceanalyzersphpanalyzertbasics)
+
 ### Functions
 ```
 public function __construct(array $tokens, string $namespace)
@@ -399,6 +435,9 @@ public function name(): ?string
 ```
 
 ## Utphpcore\Source\Analyzers\PhpAnalyzer\FunctionAnalyzer
+### Uses
+[\Utphpcore\Source\Analyzers\PhpAnalyzer\TBasics](#utphpcoresourceanalyzersphpanalyzertbasics)
+
 ### Functions
 ```
 public function __construct(array $tokens, string $namespace)
@@ -435,6 +474,9 @@ public function traits(): array
 ```
 
 ## Utphpcore\GUI\NoHtml\Xhtml
+### Implements
+[\Utphpcore\GUI\NoHtml\IXhtml](#utphpcoreguinohtmlixhtml)
+
 ### Functions
 ```
 public function __construct(string $prefix = null)
@@ -633,6 +675,9 @@ public function update(string $name, int $build, int $major, int $minor, int $re
 ```
 
 ## Utphpcore\Data\Collections\Linq
+### Implements
+[\Utphpcore\Data\Collections\ILinq](#utphpcoredatacollectionsilinq)
+
 ### Functions
 ```
 public function __construct(array $collection)
@@ -669,6 +714,9 @@ public function where(\Closure $lambda): Linq
 ```
 
 ## Utphpcore\Data\Collections\Dictionary
+### Implements
+[\Utphpcore\Data\Collections\IDictionary](#utphpcoredatacollectionsidictionary)
+
 ### Functions
 ```
 public function add(mixed $key, mixed $value, bool $setAsArray = false): bool
