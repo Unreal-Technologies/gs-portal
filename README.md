@@ -2,12 +2,6 @@
 ## Utphpcore\Debugging
 ### Functions
 ```
-private static function dumpGetTokens(IO\File $file, int $line): array
-```
-```
-private static function getTrace(GUI\NoHtml\Xhtml $body): ?GUI\NoHtml\Xhtml
-```
-```
 public static function dump(mixed ...$arguments): ?string
 ```
 ```
@@ -98,9 +92,6 @@ public static function fromString(string $sPath): IFile
 ## Utphpcore\IO\Directory
 ### Functions
 ```
-private function __construct(string $sDir)
-```
-```
 public function close(): void
 ```
 ```
@@ -144,13 +135,10 @@ public static function fromString(string $sDir): Directory
 ```
 
 ## Utphpcore\IO\Data\Db\Database
+### Extends
+[\Utphpcore\Data\Raw](#utphpcoredataraw)
+
 ### Functions
-```
-private function __construct(string $sHost, string $sUsername, ?string $sPassword, string $sDatabase)
-```
-```
-private function getPdoInstance(): \PDO
-```
 ```
 public function beginTransaction(): void
 ```
@@ -183,6 +171,9 @@ public static function getInstance(mixed $mInstanceID = null): ?Database
 ```
 
 ## Utphpcore\IO\Common\Dtd
+### Extends
+[\Utphpcore\IO\File](#utphpcoreiofile)
+
 ### Functions
 ```
 public function __construct(string $path, bool $requiresExtension = true)
@@ -192,6 +183,9 @@ public function systemId(): ?string
 ```
 
 ## Utphpcore\IO\Common\Xml
+### Extends
+[\Utphpcore\IO\File](#utphpcoreiofile)
+
 ### Functions
 ```
 public function __construct(string $path, bool $requiresExtension = true)
@@ -201,6 +195,9 @@ public function document(): ?\Utphpcore\IO\Xml\IXmlDocument
 ```
 
 ## Utphpcore\IO\Common\Ini
+### Extends
+[\Utphpcore\IO\File](#utphpcoreiofile)
+
 ### Functions
 ```
 public function __construct(string $path, bool $requiresExtension = true)
@@ -251,15 +248,6 @@ final public static function createFromSimpleXml(\SimpleXMLElement $element, Doc
 final public static function createFromXml(string $xmlstring, Doctype $doctype = null): Element
 ```
 ```
-private function ampParser(string $text): string
-```
-```
-private function asMixed(): mixed
-```
-```
-private function textParser(string $text): ?string
-```
-```
 public function __clone(): void
 ```
 ```
@@ -279,6 +267,9 @@ public function remove(IXmlElement $element): bool
 ```
 
 ## Utphpcore\IO\Xml\Document
+### Extends
+[\Utphpcore\IO\Xml\Element](#utphpcoreioxmlelement)
+
 ### Functions
 ```
 final public function asElement(): IXmlElement
@@ -413,6 +404,9 @@ public function name(): ?string
 public function __construct(array $tokens, string $namespace)
 ```
 ```
+public function isPrivate(): bool
+```
+```
 public function name(): ?string
 ```
 ```
@@ -542,12 +536,6 @@ public function set(string $text, string $value, bool $isSelected): void
 ## Utphpcore\GUI\NoHtml\Materialize\Form
 ### Functions
 ```
-private function input(Form\Options $options, string $text, string $id, string $inputType, bool $required, mixed $value): ?\Utphpcore\GUI\NoHtml\Xhtml
-```
-```
-private function select(Form\Options $options, string $text, string $id, mixed $value, bool $required, array $list): ?\Utphpcore\GUI\NoHtml\Xhtml
-```
-```
 public function __construct(\Utphpcore\GUI\NoHtml\Xhtml $container, Form\Methods $method, \Closure $optionsCb = null)
 ```
 ```
@@ -570,6 +558,9 @@ function __construct(\Utphpcore\GUI\NoHtml\IXhtml $container, string $icon)
 ```
 
 ## Utphpcore\GUI\NoHtml\Materialize\Navigation
+### Extends
+[\Utphpcore\GUI\NoHtml\Materialize\Submenu](#utphpcoreguinohtmlmaterializesubmenu)
+
 ### Functions
 ```
 public function __construct()
@@ -602,12 +593,6 @@ public function toArray(): array
 function __construct(\Closure $cb)
 ```
 ```
-private function initializeAdminCommands(): void
-```
-```
-private function initializeDbs(): void
-```
-```
 public function get(int $property): mixed
 ```
 ```
@@ -628,9 +613,6 @@ public static function shutdown(): void
 
 ## Utphpcore\Data\Version
 ### Functions
-```
-private function updatePositionRecursive(Version $version, int $value): void
-```
 ```
 public function __construct(string $name, int $build, int $major, int $minor, int $revision, ?string $url = null)
 ```
@@ -711,18 +693,27 @@ public static function fromArray(array $kvp): Dictionary
 ```
 
 ## Utphpcore\Data\Exceptions\NotImplementedException
+### Extends
+[\Exception](#exception)
+
 ### Functions
 ```
 public function __construct(string $message = "", int $code = 0, ?\Throwable $previous = null)
 ```
 
 ## Utphpcore\Data\Exceptions\UnexpectedValueException
+### Extends
+[\Exception](#exception)
+
 ### Functions
 ```
 public function __construct(string $message = "", int $code = 0, ?\Throwable $previous = null)
 ```
 
 ## Utphpcore\Data\Exceptions\IOException
+### Extends
+[\Exception](#exception)
+
 ### Functions
 ```
 public function __construct(string $message = "", int $code = 0, ?\Throwable $previous = null)
@@ -739,9 +730,6 @@ public function get(string $path, string $seperator = '/'): mixed
 
 ## Utphpcore\Data\AssetManager
 ### Functions
-```
-private function getFromDirectory(string $asset, \Utphpcore\IO\IDirectory $directory): ?\Utphpcore\IO\IDiskManager
-```
 ```
 public function __construct(\Utphpcore\Core $core)
 ```
@@ -787,22 +775,10 @@ public static function set(CacheTypes $cache, string $key, mixed $mValue): void
 ```
 function __construct(\Utphpcore\IO\Directory $directory)
 ```
-```
-private function compareReferences(array $fileToObject, array $objectReference, array $fileData): array
-```
-```
-private function itterateFiles(\Utphpcore\IO\Directory $directory): array
-```
-```
-private function referenceOrderedMapping(array $references): array
-```
 
 ## Utphpcore\Commands\Readme
 ### Functions
 ```
 function __construct(\Utphpcore\IO\Directory $directory)
-```
-```
-private function itterateFiles(\Utphpcore\IO\Directory $directory): array
 ```
 
