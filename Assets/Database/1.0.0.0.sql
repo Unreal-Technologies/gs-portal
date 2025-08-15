@@ -7,7 +7,7 @@ values
 ('Portal');
 
 set @instanceId = null;
-select `id` into @instanceId from `utphpcore`.`instance` where `name` = 'portal';
+select `id` into @instanceId from `utphpcore`.`instance` where `name` = 'portal' limit 0,1;
 
 create table `cards`
 (
@@ -29,8 +29,8 @@ create table `card-links`
 
 insert into `cards`(`id`, `name`, `description`)
 values
-(1, 'A Lonely Gameserver', '--description--'),
-(2, 'W.WHOT.AI', '--description--');
+(1, 'A Lonely Gameserver', 'Game server information, downloads & more.'),
+(2, 'W.WHOT.AI', 'Basic AI to generate shizzel.');
 
 insert into `card-links`(`card-id`, `text`, `url`)
 values

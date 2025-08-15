@@ -31,6 +31,14 @@ public static function initialize(): void
 ```
 public static function shutdown(): void
 ```
+## Class: \Utphpcore\Core\Messages
+### Extends
+Class: [\Utphpcore\Data\Stack](#class-utphpcoredatastack)
+
+### Functions
+```
+public function push(mixed $data): void
+```
 ## Class: \Utphpcore\Data\AssetManager
 ### Functions
 ```
