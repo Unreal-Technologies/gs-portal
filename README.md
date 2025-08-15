@@ -315,6 +315,9 @@ public function target(): array
 public function __construct(string $default)
 ```
 ```
+public function defaultRoute(): string
+```
+```
 public function match(): ?Route
 ```
 ```
@@ -327,6 +330,17 @@ public function slug(): string
 ### Uses
 Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionsenumtinfo)
 
+## Class: \Utphpcore\Data\Stack
+### Functions
+```
+public function isEmpty(): bool
+```
+```
+public function pop(): mixed
+```
+```
+public function push(mixed $data): void
+```
 ## Class: \Utphpcore\Data\Version
 ### Functions
 ```
@@ -385,6 +399,10 @@ public function set(string $name, string $value): void
 ### Uses
 Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionsenumtinfo)
 
+## Enum: \Utphpcore\GUI\NoHtml\Clearmodes
+### Uses
+Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionsenumtinfo)
+
 ## Class: \Utphpcore\GUI\NoHtml\FontAwesome\Icon
 ### Functions
 ```
@@ -411,7 +429,7 @@ public function attributes(): Attributes
 public function children(): array
 ```
 ```
-public function clear(): void
+public function clear(Clearmodes $mode = Clearmodes::Both): void
 ```
 ```
 public function get(string $path, \Closure $callback = null): array
@@ -543,7 +561,7 @@ public function attributes(): Attributes
 public function children(): array
 ```
 ```
-public function clear(): void
+public function clear(Clearmodes $mode = Clearmodes::Both): void
 ```
 ```
 public function get(string $path, \Closure $callback = null): array
@@ -553,6 +571,11 @@ public function parent(): ?Xhtml
 ```
 ```
 public function text(string $text): void
+```
+## Class: \Utphpcore\GUI\ToDo
+### Functions
+```
+function __construct(string ...$arguments)
 ```
 ## Class: \Utphpcore\IO\Common\Dtd
 ### Extends

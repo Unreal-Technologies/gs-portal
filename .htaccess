@@ -1,5 +1,5 @@
 php_value display_errors 1
-php_value memory_limit 4096M
+php_value memory_limit 1M
 php_value auto_prepend_file "Utphpcore/Init.Core.php"
 
 RewriteEngine On
