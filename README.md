@@ -1,4 +1,9 @@
 #--app--
+## Class: \Utphpcore\Commands\Clear
+### Functions
+```
+function __construct()
+```
 ## Class: \Utphpcore\Commands\Map
 ### Functions
 ```
@@ -15,16 +20,10 @@ function __construct(\Utphpcore\IO\Directory $directory)
 function __construct(\Closure $cb)
 ```
 ```
-public function get(int $property): mixed
-```
-```
 public function physicalToRelativePath(string $path): string
 ```
 ```
 public function redirect(?string $url = null): void
-```
-```
-public function set(int $property, mixed $value)
 ```
 ```
 public static function initialize(): void
@@ -50,13 +49,19 @@ Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionse
 ## Class: \Utphpcore\Data\Cache
 ### Functions
 ```
+public  static function getclear(string $key): mixed
+```
+```
 public static function all(CacheTypes $cache): mixed
 ```
 ```
 public static function clear(CacheTypes $cache, string $key): bool
 ```
 ```
-public static function get(CacheTypes $cache, string $key): mixed
+public static function create(CacheTypes $cache, string $key, \Closure $callback): void
+```
+```
+public static function get(string $key): mixed
 ```
 ```
 public static function set(CacheTypes $cache, string $key, mixed $mValue): void
@@ -68,6 +73,7 @@ Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionse
 ## Class: \Utphpcore\Data\Collections\Dictionary
 ### Implements
 Interface: [\Utphpcore\Data\Collections\IDictionary](#interface-utphpcoredatacollectionsidictionary)
+Unknown: [\ArrayAccess](#unknown-arrayaccess)
 
 ### Functions
 ```
@@ -80,6 +86,18 @@ public function get(mixed $key): mixed
 public function keys(): array
 ```
 ```
+public function offsetExists(mixed $index): bool
+```
+```
+public function offsetGet(mixed $index): mixed
+```
+```
+public function offsetSet(mixed $index, mixed $value): void
+```
+```
+public function offsetUnset(mixed $index): void
+```
+```
 public function remove(mixed $key): bool
 ```
 ```
@@ -89,7 +107,7 @@ public function toArray(): array
 public function values(): array
 ```
 ```
-public static function fromArray(array $kvp): Dictionary
+public static function fromArray(array $kvp): IDictionary
 ```
 ## Trait: \Utphpcore\Data\Collections\Enum\TInfo
 ### Functions
@@ -131,6 +149,9 @@ public function toArray(): array
 ```
 public function values(): array
 ```
+```
+public static function fromArray(array $kvp): IDictionary
+```
 ## Interface: \Utphpcore\Data\Collections\ILinq
 ### Functions
 ```
@@ -165,6 +186,14 @@ public function toArray(\Closure $lambda = null): array
 ```
 ```
 public function where(\Closure $lambda): ILinq
+```
+## Class: \Utphpcore\Data\Collections\KeyValuePair
+### Extends
+Class: [\Utphpcore\Data\Collections\Dictionary](#class-utphpcoredatacollectionsdictionary)
+
+### Functions
+```
+public static function fromArray(array $kvp): IDictionary
 ```
 ## Class: \Utphpcore\Data\Collections\Linq
 ### Implements
@@ -254,6 +283,50 @@ public function get(string $sName): mixed
 ```
 public function toArray(): array
 ```
+## Class: \Utphpcore\Data\Route
+### Functions
+```
+public function __construct(string $match, string $target, array $parameters, RoutingModes $mode, array $queryString)
+```
+```
+public function file(): ?\Utphpcore\IO\File
+```
+```
+public function match(): array
+```
+```
+public function mode(): RoutingModes
+```
+```
+public function parameters(): array
+```
+```
+public function queryString(): array
+```
+```
+public function route(): array
+```
+```
+public function target(): array
+```
+## Class: \Utphpcore\Data\Router
+### Functions
+```
+public function __construct(string $default)
+```
+```
+public function match(): ?Route
+```
+```
+public function register(string $route, string $target, string $mode): void
+```
+```
+public function slug(): string
+```
+## Enum: \Utphpcore\Data\RoutingModes
+### Uses
+Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionsenumtinfo)
+
 ## Class: \Utphpcore\Data\Version
 ### Functions
 ```
@@ -286,7 +359,7 @@ public static function errorHandler(int $errno, string $errstr, string $errfile,
 public static function exceptionHandler(\Throwable $ex): void
 ```
 ```
-public static function trace(): void
+public static function trace(GUI\NoHtml\Xhtml $container = null): void
 ```
 ## Class: \Utphpcore\GUI\NoHTML\Attributes
 ### Functions
@@ -341,10 +414,15 @@ public function children(): array
 public function clear(): void
 ```
 ```
-public function get(string $path, \Closure $callback): void
+public function get(string $path, \Closure $callback = null): array
 ```
 ```
 public function text(string $text): void
+```
+## Class: \Utphpcore\GUI\NoHtml\Materialize\Card
+### Functions
+```
+function __construct(\Utphpcore\GUI\NoHtml\Xhtml $container, string $title, string $description, \Utphpcore\Data\Collections\KeyValuePair $links)
 ```
 ## Class: \Utphpcore\GUI\NoHtml\Materialize\Form
 ### Functions
@@ -468,7 +546,7 @@ public function children(): array
 public function clear(): void
 ```
 ```
-public function get(string $path, \Closure $callback): void
+public function get(string $path, \Closure $callback = null): array
 ```
 ```
 public function parent(): ?Xhtml
