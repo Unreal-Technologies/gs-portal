@@ -29,6 +29,9 @@ public function redirect(?string $url = null): void
 public static function initialize(): void
 ```
 ```
+public static function register_shutdown_body(string $key, \Closure $callback)
+```
+```
 public static function shutdown(): void
 ```
 ## Class: \Utphpcore\Core\Messages
@@ -450,6 +453,33 @@ public function text(string $text): void
 ```
 function __construct(\Utphpcore\GUI\NoHtml\Xhtml $container, string $title, string $description, \Utphpcore\Data\Collections\KeyValuePair $links)
 ```
+## Class: \Utphpcore\GUI\NoHtml\Materialize\Color
+### Functions
+```
+function __construct(Colors $color, ColorOffsets $offset = null)
+```
+```
+function __toString(): string
+```
+## Enum: \Utphpcore\GUI\NoHtml\Materialize\ColorOffsets
+### Uses
+Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionsenumtinfo)
+
+## Enum: \Utphpcore\GUI\NoHtml\Materialize\Colors
+### Uses
+Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionsenumtinfo)
+
+## Class: \Utphpcore\GUI\NoHtml\Materialize\FloatingActionButton
+### Functions
+```
+function __construct(Icon\Icons $icon, Color $color)
+```
+```
+public function link(string $url, Icon\Icons $icon, Color $color, string $tooltip = null, string $target = null): void
+```
+```
+public function render(\Utphpcore\GUI\NoHtml\Xhtml $container = null, $class = null, array $jsArguments = []): void
+```
 ## Class: \Utphpcore\GUI\NoHtml\Materialize\Form
 ### Functions
 ```
@@ -515,8 +545,17 @@ public function set(string $text, string $value, bool $isSelected): void
 ## Class: \Utphpcore\GUI\NoHtml\Materialize\Icon
 ### Functions
 ```
-function __construct(\Utphpcore\GUI\NoHtml\IXhtml $container, string $icon)
+function __construct(\Utphpcore\GUI\NoHtml\IXhtml $container, Icon\Icons $icon, Icon\Alignment $alignment = Icon\Alignment::None, Icon\Sizes $size = Icon\Sizes::Tiny)
 ```
+## Enum: \Utphpcore\GUI\NoHtml\Materialize\Icon\Alignment
+### Uses
+Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionsenumtinfo)
+
+## Enum: \Utphpcore\GUI\NoHtml\Materialize\Icon\Icons
+## Enum: \Utphpcore\GUI\NoHtml\Materialize\Icon\Sizes
+### Uses
+Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionsenumtinfo)
+
 ## Class: \Utphpcore\GUI\NoHtml\Materialize\Navigation
 ### Extends
 Class: [\Utphpcore\GUI\NoHtml\Materialize\Submenu](#class-utphpcoreguinohtmlmaterializesubmenu)
@@ -545,6 +584,15 @@ public function seperator(): void
 ```
 public function toArray(): array
 ```
+## Class: \Utphpcore\GUI\NoHtml\Materialize\Tooltip
+### Functions
+```
+function __construct(\Utphpcore\GUI\NoHtml\Xhtml $container, string $text, Tooltip\Positions $position = Tooltip\Positions::Bottom)
+```
+## Enum: \Utphpcore\GUI\NoHtml\Materialize\Tooltip\Positions
+### Uses
+Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionsenumtinfo)
+
 ## Class: \Utphpcore\GUI\NoHtml\Xhtml
 ### Implements
 Interface: [\Utphpcore\GUI\NoHtml\IXhtml](#interface-utphpcoreguinohtmlixhtml)
@@ -573,6 +621,9 @@ public function clear(Clearmodes $mode = Clearmodes::Both): void
 ```
 ```
 public function get(string $path, \Closure $callback = null): array
+```
+```
+public function javascript(): Xhtml
 ```
 ```
 public function parent(): ?Xhtml
