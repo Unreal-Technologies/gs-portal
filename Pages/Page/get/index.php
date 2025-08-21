@@ -1,11 +1,8 @@
 <?php
-XHTML -> get('body/div@.container', function(\Utphpcore\GUI\NoHtml\Xhtml $container)
+Utphpcore\Data\Cache::get(\Utphpcore\Core::Xhtml) -> get('body/div@.container', function(\Utphpcore\GUI\NoHtml\Xhtml $container)
 {
-    $configuration = Utphpcore\Data\Cache::get(\Utphpcore\Core::Configuration); /* @var $configuration Utphpcore\Data\Configuration */
-    
     $rowContainer = $container -> add('div@.row');
-    $rowContainer -> add('div@.col s12 center/h1') -> text($configuration -> get('App/Application/Title'));
-    
+
     $appDbc = Utphpcore\IO\Data\Db\Database::getInstance('App'); /* @var $appDbc Utphpcore\IO\Data\Db\Database */
     $appDbc -> query('select '
             . '`cards`.`id`, '

@@ -565,7 +565,7 @@ Class: [\Utphpcore\GUI\NoHtml\Materialize\Submenu](#class-utphpcoreguinohtmlmate
 public function __construct()
 ```
 ```
-public function navBar(\Utphpcore\GUI\NoHtml\IXhtml $container): void
+public function navBar(\Utphpcore\GUI\NoHtml\IXhtml $container, Color $color, string $title): void
 ```
 ```
 public function submenu(string $text, \Closure $callback): void
@@ -577,6 +577,9 @@ public function __construct()
 ```
 ```
 public function link(string $text, string $link, string $target=null): void
+```
+```
+public function modal(string $text, string $link): void
 ```
 ```
 public function seperator(): void
