@@ -1,0 +1,3 @@
+[submodule "Utphpcore"]
+path = Utphpcore
+url = https://github.com/Unreal-Technologies/utphpcore.git
