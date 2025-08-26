@@ -2,6 +2,8 @@
 Utphpcore\Data\Cache::get(\Utphpcore\Core::Xhtml) -> get('body/div@.container', function(\Utphpcore\GUI\NoHtml\Xhtml $container)
 {
     $rowContainer = $container -> add('div@.row');
+    $rowContainer -> add('h4') -> text('Home');
+    $rowContainer -> add('hr');
 
     $appDbc = Utphpcore\IO\Data\Db\Database::getInstance('App'); /* @var $appDbc Utphpcore\IO\Data\Db\Database */
     $appDbc -> query('select '

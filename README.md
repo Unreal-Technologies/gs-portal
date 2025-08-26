@@ -527,6 +527,9 @@ public function button(string $text, string $action, \Closure $optionsCb = null)
 public function field(string $id, string $text, Form\InputTypes $type, mixed $value, bool $required, \Closure $optionsCb = null): \Utphpcore\GUI\NoHtml\Xhtml
 ```
 ```
+public function fieldset(string $text, \Closure $callback): void
+```
+```
 public function reference(): \Utphpcore\GUI\NoHtml\Xhtml
 ```
 ```
