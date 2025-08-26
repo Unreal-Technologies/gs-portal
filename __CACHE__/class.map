@@ -27,6 +27,7 @@ require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Attributes.Class.php
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Clearmodes.Enum.php'); /* requires: /opt/lampp/htdocs/portal/Utphpcore/Data/Collections/Enum/TInfo.Trait.php */
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/FontAwesome/Icon.Class.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/IXhtml.Interface.php');
+require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Alignment.Enum.php'); /* requires: /opt/lampp/htdocs/portal/Utphpcore/Data/Collections/Enum/TInfo.Trait.php */
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Card.Class.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Color.Class.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/ColorOffsets.Enum.php'); /* requires: /opt/lampp/htdocs/portal/Utphpcore/Data/Collections/Enum/TInfo.Trait.php */
@@ -39,7 +40,6 @@ require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Form/Met
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Form/Options.Class.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Form/SelectOptions.Class.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Icon.Class.php');
-require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Icon/Alignment.Enum.php'); /* requires: /opt/lampp/htdocs/portal/Utphpcore/Data/Collections/Enum/TInfo.Trait.php */
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Icon/Icons.Enum.php');
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Icon/Sizes.Enum.php'); /* requires: /opt/lampp/htdocs/portal/Utphpcore/Data/Collections/Enum/TInfo.Trait.php */
 require_once('/opt/lampp/htdocs/portal/Utphpcore/GUI/NoHtml/Materialize/Submenu.Class.php');

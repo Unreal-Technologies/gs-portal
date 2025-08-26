@@ -26,13 +26,33 @@ public function physicalToRelativePath(string $path): string
 public function redirect(?string $url = null): void
 ```
 ```
+public static function MainMenu(bool $update): void
+```
+```
 public static function initialize(): void
+```
+```
+public static function logout(): void
 ```
 ```
 public static function register_shutdown_body(string $key, \Closure $callback)
 ```
 ```
 public static function shutdown(): void
+```
+## Class: \Utphpcore\Core\AuthenticationToken
+### Functions
+```
+function __construct(int $userId, array $instanceIds, bool $isAdministrator)
+```
+```
+public function isAdministrator(): bool
+```
+```
+public function isAuthenticated(): bool
+```
+```
+public function userId(): int
 ```
 ## Class: \Utphpcore\Core\Messages
 ### Extends
@@ -41,6 +61,17 @@ Class: [\Utphpcore\Data\Stack](#class-utphpcoredatastack)
 ### Functions
 ```
 public function push(mixed $data): void
+```
+## Class: \Utphpcore\Core\Modalresult
+### Functions
+```
+public function __construct(bool $success, string $message)
+```
+```
+public function __toString(): string
+```
+```
+public function reload(): void
 ```
 ## Class: \Utphpcore\Data\AssetManager
 ### Functions
@@ -448,6 +479,10 @@ public function get(string $path, \Closure $callback = null): array
 ```
 public function text(string $text): void
 ```
+## Enum: \Utphpcore\GUI\NoHtml\Materialize\Alignment
+### Uses
+Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionsenumtinfo)
+
 ## Class: \Utphpcore\GUI\NoHtml\Materialize\Card
 ### Functions
 ```
@@ -511,6 +546,9 @@ Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionse
 protected function __construct()
 ```
 ```
+public function align(\Utphpcore\GUI\NoHtml\Materialize\Alignment $alignment = null): \Utphpcore\GUI\NoHtml\Materialize\Alignment
+```
+```
 public function max(?int $value=null, bool $clear = false): ?int
 ```
 ```
@@ -545,12 +583,8 @@ public function set(string $text, string $value, bool $isSelected): void
 ## Class: \Utphpcore\GUI\NoHtml\Materialize\Icon
 ### Functions
 ```
-function __construct(\Utphpcore\GUI\NoHtml\IXhtml $container, Icon\Icons $icon, Icon\Alignment $alignment = Icon\Alignment::None, Icon\Sizes $size = Icon\Sizes::Tiny)
+function __construct(\Utphpcore\GUI\NoHtml\IXhtml $container, Icon\Icons $icon, Alignment $alignment = Alignment::None, Icon\Sizes $size = Icon\Sizes::Tiny)
 ```
-## Enum: \Utphpcore\GUI\NoHtml\Materialize\Icon\Alignment
-### Uses
-Trait: [\Utphpcore\Data\Collections\Enum\TInfo](#trait-utphpcoredatacollectionsenumtinfo)
-
 ## Enum: \Utphpcore\GUI\NoHtml\Materialize\Icon\Icons
 ## Enum: \Utphpcore\GUI\NoHtml\Materialize\Icon\Sizes
 ### Uses
